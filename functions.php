@@ -24,5 +24,8 @@ add_action( 'widgets_init', 'mv_widgets' );
 add_action( 'customize_register', 'mv_customize_register' );
 add_action( 'customize_preview_init', 'mv_customize_preview_init' );
 add_action( 'bp_setup_nav', 'mv_buddypress_profile_tabs' );
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+// remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
 
 // Shortcuts

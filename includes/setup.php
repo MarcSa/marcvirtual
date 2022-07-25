@@ -71,6 +71,8 @@ function mv_setup_theme(){
             ),
         ],
     ] );
+    add_theme_support( 'woocommerce' );
+    
 
     register_nav_menu( 'primary', __( 'Primary Menu', 'marcvirtual' ) );
     register_nav_menu( 'secondary', __( 'Secondary Menu', 'marcvirtual' ) );
