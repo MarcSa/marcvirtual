@@ -16,6 +16,7 @@ include( get_theme_file_path( '/includes/buddypress/profile-tabs.php' ) );
 include( get_theme_file_path( '/includes/utility.php' ) );
 include( get_theme_file_path( '/includes/buddypress/profile-posts.php' ) );
 include( get_theme_file_path( '/includes/admin/author-fields.php' ) );
+include( get_theme_file_path( '/includes/avatar.php' ) );
 
 
 // Hooks
@@ -32,5 +33,6 @@ add_action( 'show_user_profile', 'mv_custom_user_profile_fields' );
 add_action( 'edit_user_profile', 'mv_custom_user_profile_fields' );
 add_action( 'personal_options_update', 'mv_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'mv_save_extra_profile_fields' );
+add_action( 'avatar_defaults', 'mv_new_avatar' );
 
 // Shortcuts
