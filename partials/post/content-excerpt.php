@@ -4,7 +4,7 @@
 
         <div class="entry-image">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail( 'full', [ 
+                <?php the_post_thumbnail( 'mv-post-image', [ 
                     'class' =>  'image_fade' 
                 ] ); ?>
             </a>

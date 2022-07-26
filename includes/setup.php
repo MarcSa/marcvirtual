@@ -72,6 +72,8 @@ function mv_setup_theme(){
         ],
     ] );
     add_theme_support( 'woocommerce' );
+
+    add_image_size( 'mv-post-image', 860, 575, false );
     
 
     register_nav_menu( 'primary', __( 'Primary Menu', 'marcvirtual' ) );
