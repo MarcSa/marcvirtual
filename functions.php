@@ -15,6 +15,7 @@ include( get_theme_file_path( '/includes/customizer/enqueue.php' ) );
 include( get_theme_file_path( '/includes/buddypress/profile-tabs.php' ) );
 include( get_theme_file_path( '/includes/utility.php' ) );
 include( get_theme_file_path( '/includes/buddypress/profile-posts.php' ) );
+include( get_theme_file_path( '/includes/admin/author-fields.php' ) );
 
 
 // Hooks
@@ -26,6 +27,10 @@ add_action( 'customize_preview_init', 'mv_customize_preview_init' );
 add_action( 'bp_setup_nav', 'mv_buddypress_profile_tabs' );
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 // remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
-
+add_filter( 'excerpt_more', '__return_false' );
+add_action( 'show_user_profile', 'mv_custom_user_profile_fields' );
+add_action( 'edit_user_profile', 'mv_custom_user_profile_fields' );
+add_action( 'personal_options_update', 'mv_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'mv_save_extra_profile_fields' );
 
 // Shortcuts
